@@ -1,6 +1,10 @@
 package com.example.cryptoapp.data.model.metadata
 
+import com.google.gson.annotations.SerializedName
+
 data class MetaModel(
-    val `data`: Data,
-    val status: Status
+    @SerializedName("data")
+    val `data`: List<CryptoMetaData>,
+    @SerializedName("status")
+    val status: CryptoMetaDataStatusResponse
 )
